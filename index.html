@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="title">Celestia Survey Form</h1>
+    <p id="description">Thank you for using our platform for your travel need. Help us improve by filling out this form</p>
+    <form id="survey-form">
+        <fieldset>
+            <label>What is your name?
+                <input id="name-label" type="text" name="name" placeholder="Enter your name" required>
+            </label>
+            <label>What's your email?
+                <input id="email-label" type="email" name="email"
+                pattern="(?!(^[.-].*|[^@]*[.-]@|.*\.{2,}.*)|^.{254}.)([a-zA-Z0-9!#$%&'*+\/=?^_`{|}~.-]+@)(?!-.*|.*-\.)([a-zA-Z0-9-]{1,63}\.)+[a-zA-Z]{2,15}"
+                placeholder="Enter your email"
+                required>
+            </label>
+            <label>How old are you? <span class="optional">(optional)</span>
+                <input id="number-label" type="number" name="age" min="13" max="150" placeholder="Age">
+            </label>
+            <label>Where did you hear about us?
+                <select id="dropdown" name="dropdown">
+                    <option value="">(select one)</option>
+                    <option value="1">Internet/search result</option>
+                    <option value="2">Social media</option>
+                    <option value="3">Word of mouth</option>
+                    <option value="4">Other</option>
+                </select>
+            </label>
+            <label>If you chose other, where did you hear about us?
+                <textarea name="other" class="other" cols="50" rows="10"></textarea>
+            </label>
+        </fieldset>
+        <fieldset>
+            <p>Would you recommend Celestia to a friend?</p>
+            <label><input type="radio" name="recommendation">Absolutely!</label>
+            <label><input type="radio" name="recommendation">Maybe</label>
+            <label><input type="radio" name="recommendation">Nah</label>
+        </fieldset>
+        <fieldset>
+            <label>What did you love about our service?
+                <select name="dropdown" id="dropdown">
+                    <option value="">(select one)</option>
+                    <option value="1">Services we offer</option>
+                    <option value="2">Reliable customer service</option>
+                    <option value="3">Other</option>
+                </select>
+            </label>
+            <label>If you chose other, would you like to tell us what went great?
+                <textarea name="other" class="other" cols="50" rows="10"></textarea>
+            </label>
+        </fieldset>
+        <fieldset>
+            <p>What could be better?</p>
+            <label><input class="evaluation-label" type="checkbox" name="evaluation"> Representative's response time</label>
+            <label><input class="evaluation-label" type="checkbox" name="evaluation"> Package options</label>
+            <label><input class="evaluation-label" type="checkbox" name="evaluation"> Application responsiveness</label>
+            <label><input class="evaluation-label" type="checkbox" name="evaluation"> Other (please tell us more about it):
+                <textarea name="other" class="other" cols="50" rows="10"></textarea>
+            </label>
+        </fieldset>
+        <fieldset>
+            <p>Care to leave us a comment? That'd be great!</p>
+            <textarea name="comment" id="comment-label" cols="50" rows="10"></textarea>
+        </fieldset>
+        <input type="submit" name="submit" id="submit-label">
+    </form>
+</body>
+</html>

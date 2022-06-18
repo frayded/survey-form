@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body {
+    margin: 0;
+    padding: 75px 150px;
+    font-family: Lato, sans-serif;
+    background-image: url(./img/pexels-ian-beckley-2440009.jpg);
+    font-size: 16px;
+}
+
+#title,
+#description {
+    text-align: center;
+    color: #b3664a;
+    margin: 0.5em auto;
+}
+
+#title {
+    font-size: 56px;
+    margin: 0.1em auto;
+}
+
+#description {
+    font-size: 24px;
+    font-style: italic;
+}
